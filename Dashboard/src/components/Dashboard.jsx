@@ -15,7 +15,10 @@ const Dashboard = () => {
       try {
         const { data } = await axios.get(
           "https://bharat-care-hms-project-backend.onrender.com/api/v1/appointment/getall",
-          { withCredentials: true }
+          {
+            withCredentials: true,
+            headers: { "Content-Type": "application/json" },
+          }
         );
         setAppointments(data.appointments);
       } catch (error) {
