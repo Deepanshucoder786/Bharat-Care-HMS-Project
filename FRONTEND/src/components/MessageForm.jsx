@@ -12,7 +12,7 @@ const MessageForm = () => {
     e.preventDefault()
     try {
       await axios.post(
-        "http://localhost:3000/api/v1/message/send",
+        "https://bharat-care-hms-project-backend.onrender.com/api/v1/message/send",
         {firstName,lastName,email,phone,message},
         {
           withCredentials:true,

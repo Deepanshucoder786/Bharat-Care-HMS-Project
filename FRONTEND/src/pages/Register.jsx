@@ -24,7 +24,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/patient/register",
+      const response = await axios.post("https://bharat-care-hms-project-backend.onrender.com/api/v1/user/patient/register",
         { firstName, lastName, email, phone, nic, dob, gender, password },
         {
           withCredentials: true,

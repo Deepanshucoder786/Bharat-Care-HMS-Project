@@ -10,7 +10,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/v1/message/getall", { withCredentials: true })
+        const { data } = await axios.get("https://bharat-care-hms-project-backend.onrender.com/api/v1/message/getall", { withCredentials: true })
         setMessages(data.messages)
       } catch (error) {
         console.log("Error are occured when fetching the Messages", error)

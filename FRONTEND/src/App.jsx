@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser=async()=>{
       try {
-       const response= await axios.get("http://localhost:3000/api/v1/user/patient/me",{withCredentials:true});
+       const response= await axios.get("https://bharat-care-hms-project-backend.onrender.com/api/v1/user/patient/me",{withCredentials:true});
        setisAuthenticated(true);
        setUser(response.data.user)
       } catch (error) {

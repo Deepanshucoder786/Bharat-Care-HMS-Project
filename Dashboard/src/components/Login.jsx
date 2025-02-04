@@ -19,7 +19,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "http://localhost:3000/api/v1/user/login",
+          "https://bharat-care-hms-project-backend.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Admin" },
           {
             withCredentials: true,
