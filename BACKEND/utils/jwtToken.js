@@ -17,6 +17,7 @@ export const generateToken = (user, message, statusCode, res) => {
         success: true,
         message,
         user,
+        role:user.role,
         token,
       });
   };

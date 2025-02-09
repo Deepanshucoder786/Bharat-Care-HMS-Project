@@ -14,7 +14,7 @@ import AddNewAdmin from "./components/AddNewAdmin";
 import "./App.css";
 
 const App = () => {
-  const { isAuthenticated, setIsAuthenticated, admin, setAdmin } =
+  const { isAuthenticated, setIsAuthenticated, setAdmin } =
     useContext(Context);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const App = () => {
           "https://bharat-care-hms-project-backend.onrender.com/api/v1/user/admin/me",
           {
             withCredentials: true,
+            headers: { "Content-Type": "application/json" },
           }
         );
         setIsAuthenticated(true);
